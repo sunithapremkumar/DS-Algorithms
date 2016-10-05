@@ -1,28 +1,46 @@
-import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.Scanner;
+
+import java.util.PriorityQueue;
+import java.util.*;
 
 public class RunningMedian {
 
-	    public BigDecimal findMedian(int[] arr, int size){
-	        if(size ==0)
-	            return new BigDecimal(0);
-	        Arrays.sort(arr, 0, size-1);
-	        BigDecimal medianValue = null;
-	        int lastIndex = size -1;
-	        
-	        //Check if even
-	        if(size%2 ==0){
-	            int medianIndex = lastIndex/2;
-	            medianValue = new BigDecimal(arr[medianIndex] + arr[medianIndex+1]);
-	            medianValue = medianValue.divide(new BigDecimal(2), 1, BigDecimal.ROUND_UNNECESSARY);
-	        }else{
-	             int medianIndex = lastIndex/2;  
-	             medianValue = new BigDecimal(arr[medianIndex]);
-	             medianValue = medianValue.setScale(1);
+	private class MyComparator implements Comparator<Integer>{
+		 public int compare(Integer a, Integer b){
+	            return (b-a);
 	        }
-	        return medianValue;
+	}
+	 static PriorityQueue<Integer> lowers = new PriorityQueue<Integer>(10, new Comparator<Integer>(){
+	        public int compare(Integer a, Integer b){
+	            return (b-a);
+	        }
+	    });
+	   static PriorityQueue<Integer> highers = new PriorityQueue<Integer>();
+	    
+	    public static void addToList(int n){
+	        if(lowers.size() ==0 || n < lowers.peek())
+	            lowers.add(n);
+	        else
+	            highers.add(n);
 	    }
+	    
+	    public static void rebalance(){
+	        PriorityQueue<Integer> bigger = (lowers.size() > highers.size())?lowers:highers;
+	        PriorityQueue<Integer> smaller = (lowers.size() > highers.size())?highers:lowers;
+	        if((bigger.size() - smaller.size()) >=2){
+	            smaller.add(bigger.poll());
+	        }
+	    }
+	    
+	    public static double findMedian(){      
+	    	 PriorityQueue<Integer> bigger = (lowers.size() > highers.size())?lowers:highers;
+		     PriorityQueue<Integer> smaller = (lowers.size() > highers.size())?highers:lowers;
+	        if(bigger.size() == smaller.size()){
+	            return ((double)(bigger.peek() + smaller.peek()))/2;
+	        }
+	        else
+	            return (double)bigger.peek();
+	    }
+	   
 	    
 	    public static void main(String[] args) {
 	        Scanner in = new Scanner(System.in);
@@ -30,7 +48,10 @@ public class RunningMedian {
 	        int a[] = new int[n];
 	        for(int a_i=0; a_i < n; a_i++){
 	            a[a_i] = in.nextInt();
-	            System.out.println(new RunningMedian().findMedian(a, a_i+1));
+	            addToList(a[a_i]);
+	            rebalance();
+	            double median = findMedian();
+	            System.out.println(median);
 	        }
 	    }
 	}

@@ -1,7 +1,11 @@
 package arrays;
 import java.util.Arrays;
 
-//http://www.geeksforgeeks.org/counting-sort/
+/**
+ * http://www.geeksforgeeks.org/counting-sort/
+ * @author suni
+ *
+ */
 public class CountingSort {
  
 	

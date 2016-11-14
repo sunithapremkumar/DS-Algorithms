@@ -37,8 +37,13 @@ public class Graph {
 		
 		Edge edge = new Edge(vertex1, vertex2, weight);
 		edges.add(edge);
+		 vertex1.addAdjacentVertex(edge, vertex2);
+		 vertex2.addAdjacentVertex(edge, vertex1);
 	}
-	
+	 public Vertex getVertex(long id){
+	        return vertexMap.get(id);
+	    }
+}
 	class Edge{
 		Vertex vertex1;
 		Vertex vertex2;
@@ -50,16 +55,51 @@ public class Graph {
 			vertex2 = v2;
 			weight = wei;
 		}
+		
+		public String toString() {
+	        return "Edge " + ", vertex1=" + vertex1
+	                + ", vertex2=" + vertex2 + ", weight=" + weight + "]";
+	    }
 	}
 	
 	class Vertex{
 		long id;
 		long data;
-		List<Edge> edges;
+		List<Edge> edges = new ArrayList<>();
+		List<Vertex> adjacentVertex = new ArrayList<>();
 		
 		Vertex(long id){
 			this.id = id;
 		}
+		public void addAdjacentVertex(Edge e, Vertex v){
+	        edges.add(e);
+	        adjacentVertex.add(v);
+	    }
+	    
+	    public String toString(){
+	        return String.valueOf(id);
+	    }
+	    
+	    public List<Vertex> getAdjacentVertexes(){
+	        return adjacentVertex;
+	    }
+	    
+	    public List<Edge> getEdges(){
+	        return edges;
+	    }
+	    
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Vertex other = (Vertex) obj;
+		if (id != other.id)
+			return false;
+		return true;
+	}
 	}
 
-}
+

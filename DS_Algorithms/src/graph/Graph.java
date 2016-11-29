@@ -5,7 +5,14 @@ import java.util.*;
 public class Graph {
 	private List<Edge> edges = new ArrayList<>();
 	private Map<Long, Vertex> vertexMap = new HashMap<>();
+	private boolean isDirected = false;
+	Graph(boolean isDirected){
+		this.isDirected = isDirected;
+	}
 	
+	Graph(){
+		
+	}
 	public List<Edge> getAllEdges(){
 		return edges;
 	}
@@ -17,6 +24,10 @@ public class Graph {
 		Vertex v1 = vertexMap.get(v.id);
 		if(v1 == null)
 			vertexMap.put(v.id, v);
+	}
+	
+	public void addEdge(long v1, long v2){
+		addEdge( v1,  v2, 0);
 	}
 	
 	public void addEdge(long v1, long v2, int weight){
@@ -38,7 +49,8 @@ public class Graph {
 		Edge edge = new Edge(vertex1, vertex2, weight);
 		edges.add(edge);
 		 vertex1.addAdjacentVertex(edge, vertex2);
-		 vertex2.addAdjacentVertex(edge, vertex1);
+		 if(!isDirected)
+			 vertex2.addAdjacentVertex(edge, vertex1);
 	}
 	 public Vertex getVertex(long id){
 	        return vertexMap.get(id);

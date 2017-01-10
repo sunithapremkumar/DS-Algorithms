@@ -72,8 +72,31 @@ public class TwoSum {
 		}
 		return false;
 	}
+	//Find if pair exist for a sum in a given int[]. array can have duplicate and negatives
+   public static boolean doesPairExist(int[] arr, int sum)
+	{
+		HashMap<Integer, Integer> map = new HashMap<>();
+		for(int i: arr){
+			
+			if(map.containsKey(i))
+				map.put(i,  map.get(i) +1);
+			else
+				map.put(i, 1);
+		}
 	
-
+		for(int i: arr){
+			int otherNum = sum - i;
+		
+			if(map.containsKey(otherNum)){
+				 if(otherNum == i && map.get(otherNum) <= 1)
+						continue;
+			     return true;
+			}
+		 }
+		
+		return false;
+		}
+	
 	 public static void main(String arg[]){
 		 
 		 TwoSum sum = new TwoSum();

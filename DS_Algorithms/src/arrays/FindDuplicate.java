@@ -17,7 +17,7 @@ public static int findDuplicate(int[] arr){
   int sum = (n * (n+1))/2; // Formula for sum of n numbers
   int tot = 0;  
   for(int i : arr){
-      tot = tot + i;
+      tot = tot + i;  
   }
   
   int duplicate = tot - sum;

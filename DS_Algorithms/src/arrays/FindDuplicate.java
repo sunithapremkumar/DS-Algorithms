@@ -26,7 +26,8 @@ public static int findDuplicate(int[] arr){
 }
 
 /**
-  if there are multiple duplicates in an array. O(n)
+  if there are multiple duplicates in an array. O(n). This will not work if the array does not have any dupes. as we use array index, 
+  the index of last number will throw out of bound as the index starts with 0 but the n starts with 1
 */
 public static void findMultipleDupes(int[] arr){
 
@@ -44,7 +45,7 @@ public static void main(String arg[]){
   int[] arr = {1,2,4,5,3,2};
   System.out.println(findDuplicate(arr));
   
-  int[] arr1 = {1,2,4,3,1,5,2};
+  int[] arr1 = {1,2,4,3,6,5,7};
   findMultipleDupes(arr1);
 }
 

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+ 
 class Elevator {
     public int solution(int[] A, int[] B, int M, int X, int Y) {
         

@@ -1,5 +1,5 @@
 package binarysearchtree;
-
+  
 public class IsBinaryTree {
 
 	   Node previous = null;

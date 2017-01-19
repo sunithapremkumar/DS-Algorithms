@@ -1,5 +1,5 @@
 package graph;
-
+ 
 import java.util.*;
 
 public class Graph {
@@ -74,11 +74,12 @@ public class Graph {
 	    }
 	}
 	
-	class Vertex{
+	 class Vertex{
 		long id;
 		long data;
 		List<Edge> edges = new ArrayList<>();
 		List<Vertex> adjacentVertex = new ArrayList<>();
+		boolean isVisited = false;
 		
 		Vertex(long id){
 			this.id = id;
@@ -98,6 +99,12 @@ public class Graph {
 	    
 	    public List<Edge> getEdges(){
 	        return edges;
+	    }
+	    public void setVisited(boolean flag){
+	    	isVisited = flag;
+	    }
+	    public boolean isVisited(){
+	    	return isVisited;
 	    }
 	    
 	public boolean equals(Object obj) {

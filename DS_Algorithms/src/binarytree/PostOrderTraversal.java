@@ -2,19 +2,20 @@ package binarytree;
 
 import java.util.Stack;
  
-import binarytree.FlatternBinaryTree.TreeNode;
 
 public class PostOrderTraversal {
 
+	//Recursive
 	public void recursivePostOrder(TreeNode node){
 		if(node == null)
 			return;
 		
 		recursivePostOrder(node.left);
 		recursivePostOrder(node.right);
-		System.out.println(node.val);
+		System.out.println(node.data);
 	}
 	
+	//iterative using stack
 	public void iterativePostOrder(TreeNode node){
 		Stack<TreeNode> st = new Stack<>();
 		Stack<TreeNode> resultSt= new Stack<>(); //Since post order is printed in bottom to top, using stack
@@ -30,7 +31,7 @@ public class PostOrderTraversal {
 		}
 		
 		while(!resultSt.isEmpty())
-			System.out.println(resultSt.pop().val);
+			System.out.println(resultSt.pop().data);
 	}
 	
 	public static void main(String arg[]){

@@ -2,7 +2,6 @@ package binarytree;
 
 import java.util.Stack;
 
-import binarytree.FlatternBinaryTree.TreeNode;
 
 public class PreOrderTraversal {
 
@@ -10,7 +9,7 @@ public class PreOrderTraversal {
 	public void recursivePreOrder(TreeNode node){
 		if(node == null)
 			return;
-		System.out.println(node.val);
+		System.out.println(node.data);
 		recursivePreOrder(node.left);
 		recursivePreOrder(node.right);
 	}
@@ -21,7 +20,7 @@ public class PreOrderTraversal {
 		
 		while(!st.isEmpty()){
 			TreeNode n = st.pop();
-			System.out.println(n.val); // since pre-order is printed from top... just print it inline 
+			System.out.println(n.data); // since pre-order is printed from top... just print it inline 
 			if(n.right !=null)    // since we push it to stack push in the opposite order of what we need. Since we need left first and then right.. pushed right first.
 				st.push(n.right);
 			if(n.left !=null)

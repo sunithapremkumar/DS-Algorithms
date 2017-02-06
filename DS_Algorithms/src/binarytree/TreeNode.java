@@ -23,5 +23,9 @@ public class TreeNode <T> {
 	public String toString(){
 		return data +"";
 	}
+	
+	public boolean equals(TreeNode n){
+		return (this.data == n.data);
+	}
 
 }

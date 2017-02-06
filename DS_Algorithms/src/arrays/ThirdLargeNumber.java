@@ -55,7 +55,7 @@ public class ThirdLargeNumber {
 			workspace[++i] = inputArr[highPointer++];
 		}
      
-		for(int j = low; j < n; j++){
+		for(int j = 0; j < n; j++){
 			inputArr[low+j] = workspace[j];
 		}
 		

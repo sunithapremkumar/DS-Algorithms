@@ -73,8 +73,9 @@ public class FindSuccessor {
         root.left.right.left = new TreeNode(10); root.left.right.left.parent = root.left.right;
         root.left.right.right = new TreeNode(14); root.left.right.right.parent = root.left.right;
         FindSuccessor obj = new FindSuccessor();
-       // TreeNode result = obj.findSuccessor(root.left.left);
-        obj.inorderTraversal(root, root.left.right);
-        //System.out.println(result);
+        TreeNode result = obj.findSuccessor(root.left.left);
+        System.out.println(result);
+        //obj.inorderTraversal(root, root.left.right);
+        
 	}
 }

@@ -8,7 +8,8 @@ public class SubarrayOfUnsortedArray {
 		
 		int max = 0;
 		int endIndex = -1;
-		//traverse from 0 -> n-1 keeping max so far and make note of the last position that is not greater than the max so far as R.
+		//traverse from 0 -> n-1 keeping max so far and make note of the last position that is 
+		//not greater than the max so far as R.
 		for(int i=0; i<arr.length; i++){
 			
 			int cur = arr[i];

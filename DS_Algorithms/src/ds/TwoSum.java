@@ -46,7 +46,7 @@ public class TwoSum {
 			 else
 				 end--;
 		}
-		return false;
+		return false; 
 	}*/
 	
 	HashMap<Integer, Integer> map = new HashMap<>();
@@ -76,6 +76,7 @@ public class TwoSum {
    public static boolean doesPairExist(int[] arr, int sum)
 	{
 		HashMap<Integer, Integer> map = new HashMap<>();
+		
 		for(int i: arr){
 			
 			if(map.containsKey(i))

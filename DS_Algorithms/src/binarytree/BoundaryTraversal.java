@@ -10,14 +10,15 @@ public class BoundaryTraversal {
 	   printBoundaryLeft(node.left);
 
 	   //Print leaf nodes
-	   printLeaves(node.left);
-	   printLeaves(node.right);
+	   printLeaves(node);
+	  // printLeaves(node.right);
 
        // Print the right boundary in bottom-up manner
 	   printBoundaryRight(node.right);
 	   
    }
    
+   //Do regular traversal and check if the node is leaf
    public void printLeaves(Node n){
 	   if(n != null){
 		   printLeaves(n.left);

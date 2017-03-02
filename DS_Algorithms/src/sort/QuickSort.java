@@ -1,4 +1,4 @@
-package arrays;
+package sort;
 
 public class QuickSort {
 	

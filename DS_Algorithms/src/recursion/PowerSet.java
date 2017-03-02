@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * Exampl  - {1,2,3} returns {}, {1},{2},{1,2},{3}, {1,3}, {2,3},{1,2,3} 
  * @author suni
  *
- *Algo
+ * Algo Base case and build approach
  *  {}  = {}
  *  {1} = {}, {1}   //previous list plus adding 1 to the previous list
  *  {1,2} = {}, {1}, {2} {1,2} //previous list plus adding digit 2 to the previous list.

@@ -1,4 +1,4 @@
-package bits;
+ package bits;
 /**
  * Find max of 2 integer without using if else or comparison operator like < or  >
  * @author suni

@@ -12,7 +12,7 @@ public class StringPermutation {
 	
 	
 	/**
-	 * Algo:
+	 * Algo: Base case and build approach
 	 * A - A
 	 * AB - AB, BA (insert last char at all positions in the previous list)
 	 * ABC - CAB, ACB, ABC, CBA, BCA, BAC (insert last char at all positions in the previous list)

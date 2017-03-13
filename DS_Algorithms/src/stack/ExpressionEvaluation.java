@@ -73,7 +73,7 @@ public class ExpressionEvaluation {
   
   public static void main(String...strings){
 	  
-	  String s = "(2+4)*(6/3)";
+	  String s = "(2+4.5)*(6/3)";
 	  try{
 	   System.out.println(evaluateExpression(s));
 	  }catch(Exception e) {e.printStackTrace();}

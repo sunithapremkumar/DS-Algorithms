@@ -12,10 +12,13 @@ import java.util.ArrayList;
  *  {1} = {}, {1}   //previous list plus adding 1 to the previous list
  *  {1,2} = {}, {1}, {2} {1,2} //previous list plus adding digit 2 to the previous list.
  *  {1,2,3}={}, {1}, {2} {1,2}, {3}, {1,3},{2,3},{1,2,3} /previous list plus adding digit 3 to the previous list.
+ *  
+ *  Time complexity (n*2^n)
  */
 public class PowerSet {
 
 	//Using resultlist as a argument
+	// Algo - base case and build approach
 	public void findSubset1(int[] arr, int size, ArrayList<String> resultList){
 		
 		if(size ==0)
@@ -24,7 +27,7 @@ public class PowerSet {
 			return;
 		}
 		
-		findSubset1(arr, size-1, resultList);
+		findSubset1(arr, size-1, resultList); // O(n) times loop
 		addToList(arr[size-1], resultList);
 	}
 	//Using result list in return
@@ -41,7 +44,9 @@ public class PowerSet {
 		addToList(arr[size-1], al);
 		return al;
 	}
-	private void addToList(int data, ArrayList<String> list){
+  
+   //O(2^n) 
+	private void addToList(int data, ArrayList<String> list){ 
 		
 		ArrayList<String> newList = new ArrayList<>();
 		

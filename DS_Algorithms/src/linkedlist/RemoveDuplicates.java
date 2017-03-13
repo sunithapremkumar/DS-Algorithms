@@ -1,6 +1,6 @@
 package linkedlist;
 
-import java.util.HashMap;
+import java.util.*;
 
 public class RemoveDuplicates {
 	
@@ -13,16 +13,16 @@ public class RemoveDuplicates {
 	public static void removeDupes(){
 		
 		Node n = new Node(3, null);
-		HashMap map = new HashMap();
+		HashSet<Integer> map = new HashSet<>();
 		Node prev = null;
 		while(n != null){
 			
-			if(map.containsKey(n.data))
+			if(map.contains(n.data))
 			{
 				prev.next=n.next;
 			}
 			else{
-				map.put(n.data, true);
+				map.add(n.data);
 				prev = n;
 			}
 						

@@ -7,6 +7,7 @@ import java.util.ArrayList;
  * o/p = "ABC, CBA", BCA, BAC, ACB, CAB
  * @author suni
  *
+ *Time complexity O(n* n!)
  */
 public class StringPermutation {
 	
@@ -24,7 +25,7 @@ public class StringPermutation {
 		if(size ==0)
 			return null;
 		else{
-			ArrayList<String> al = getPermutations(str, size-1);
+			ArrayList<String> al = getPermutations(str, size-1);  // O(n) times loop
 			int indexofCurChar = size -1;
 			char c = str.charAt(indexofCurChar);
 			if(str.indexOf(c) < indexofCurChar) // Check is for the str with duplicate chars.. we need to ignore  those dupes
@@ -35,6 +36,7 @@ public class StringPermutation {
 		
 	}
 
+	 // O(n!) as the al contains all permutations.
 	private ArrayList<String> addCharToList(ArrayList<String> al, char c){
 		
 		ArrayList<String> newList = new ArrayList<>();

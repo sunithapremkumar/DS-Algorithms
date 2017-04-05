@@ -59,14 +59,14 @@ public class BinaryTreeLevelOrderWithLeavesPrintFirst {
 			
 			List<Node> leafNodes = map.get(-1);
 			for(Node n: leafNodes)
-				System.out.print(n);
+				System.out.print(n.data);
 			
 			int index = size -2;
 			while(index >=0){
 				System.out.println("");
 				List<Node> list = map.get(index);
 				for(Node n: list)
-					System.out.print(n);
+					System.out.print(n.data);
 				index--;
 			}
 			

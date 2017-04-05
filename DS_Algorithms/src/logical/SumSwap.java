@@ -31,13 +31,19 @@ public class SumSwap {
 			return;
 		int diff = Math.abs(total1-total2);
 		
+		if((diff%2) != 0){
+			System.out.println("diff is odd so we can't balance");
+			return;
+		}
+		int target = diff/2;  //the difference between those 2 elements from each array should be of target.
+		
 		ArrayList<Integer> bigArray = (total1 > total2)? arr1:arr2;
 		ArrayList<Integer> smallArray = (total1 > total2)? arr2:arr1;
 		
 		for(int i: smallArray){
 			
 			int x = i;
-			int y = diff - x;
+			int y = target + x;
 			
 			if(y > x && bigArray.contains(y)){
 				System.out.println(x + "  " + y);

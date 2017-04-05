@@ -65,8 +65,8 @@ public class OneAway {
 	public static void main(String arg[]){
 		
 		OneAway obj = new OneAway();
-		String str1 = "palo";
-		String str2 = "aplw";
+		String str1 = "ple"; //"palo";
+		String str2 = "lpes";//"aplw";
 		System.out.println(obj.isOneAway(str1, str2));
 	}
 

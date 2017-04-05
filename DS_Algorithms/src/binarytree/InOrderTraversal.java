@@ -38,6 +38,7 @@ public class InOrderTraversal {
 		root.right = new TreeNode(5);
 		root.left.left = new TreeNode(3);
 		root.left.right = new TreeNode(4);
+		root.right.left = new TreeNode(7);
 		root.right.right = new TreeNode(6);
 		InOrderTraversal obj = new InOrderTraversal();
 		obj.recursiveInOrder(root);

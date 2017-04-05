@@ -20,37 +20,37 @@ public class BoundaryTraversal {
    
    //Do regular traversal and check if the node is leaf
    public void printLeaves(Node n){
-	   if(n != null){
+	   if(n == null)
+		   return;
 		   printLeaves(n.left);
 		   
 		   printLeaves(n.right);
 		   if (n.left == null && n.right == null)
 			   System.out.println(n.data);
 		   
-	   }
-   }
-   
-   
-   public void printBoundaryLeft(Node n){
 	   
-	   if(n != null){
-		   
-		   if(n.left != null){
-			   System.out.println(n.data);
-			   printBoundaryLeft(n.left);
-		   }
-		   else if(n.right != null){
-			   System.out.println(n.data);
-			   printBoundaryLeft(n.right);
-		   }
-			  
-	   }
    }
+   
+ 
+   public void printBoundaryLeft(Node n) {
+
+		if (n == null)
+			return;		
+
+		if (n.left != null) {
+			System.out.println(n.data);
+			printBoundaryLeft(n.left);
+		} else if (n.right != null) {
+			System.out.println(n.data);
+			printBoundaryLeft(n.right);
+		}
+  
+  }
    
 public void printBoundaryRight(Node n){
 	   
-	   if(n != null){
-		   
+	   if(n == null)
+		  return;
 		   if(n.right != null){			  
 			   printBoundaryRight(n.right);
 			   System.out.println(n.data);
@@ -62,7 +62,7 @@ public void printBoundaryRight(Node n){
 			   
 		   }
 			  
-	   }
+	   
    }
 	
 	 public static void main(String args[]) 

@@ -45,7 +45,7 @@ public static void main(String arg[]){
   int[] arr = {1,2,4,5,3,2};
   System.out.println(findDuplicate(arr));
   
-  int[] arr1 = {1,2,4,3,6,5,7};
+  int[] arr1 = {1,1};
   findMultipleDupes(arr1);
 }
 

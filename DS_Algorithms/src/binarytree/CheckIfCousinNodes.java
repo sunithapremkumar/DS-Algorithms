@@ -1,5 +1,22 @@
 package binarytree;
+/**
+ * Given the binary Tree and the two nodes say ‘a’ and ‘b’, determine whether the two nodes are cousins of each other or not.
 
+Two nodes are cousins of each other if they are at same level and have different parents.
+
+Example
+
+     6
+   /   \
+  3     5
+ / \   / \
+7   8 1   3
+Say two node be 7 and 1, result is TRUE.
+Say two nodes are 3 and 5, result is FALSE.
+Say two nodes are 7 and 5, result is FALSE.
+ * @author suni
+ *
+ */
 public class CheckIfCousinNodes {
 
 	TreeNode leftParent = null, rightParent = null;

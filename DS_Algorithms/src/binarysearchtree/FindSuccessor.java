@@ -65,13 +65,13 @@ public class FindSuccessor {
 	}
 	
 	public static void main(String arg[]){
-		TreeNode root = new TreeNode(20);
-        root.left = new TreeNode(8); root.left.parent = root;
-        root.right = new TreeNode(22); root.right.parent = root;
-        root.left.left = new TreeNode(4); root.left.left.parent=root.left;
-        root.left.right = new TreeNode(12); root.left.right.parent = root.left;
-        root.left.right.left = new TreeNode(10); root.left.right.left.parent = root.left.right;
-        root.left.right.right = new TreeNode(14); root.left.right.right.parent = root.left.right;
+				TreeNode root = new TreeNode(20);
+		        root.left = new TreeNode(8); root.left.parent = root;
+		        root.right = new TreeNode(22); root.right.parent = root;
+		        root.left.left = new TreeNode(4); root.left.left.parent=root.left;
+		        root.left.right = new TreeNode(12); root.left.right.parent = root.left;
+		        root.left.right.left = new TreeNode(10); root.left.right.left.parent = root.left.right;
+		        root.left.right.right = new TreeNode(14); root.left.right.right.parent = root.left.right;
         FindSuccessor obj = new FindSuccessor();
         TreeNode result = obj.findSuccessor(root.left.left);
         System.out.println(result);

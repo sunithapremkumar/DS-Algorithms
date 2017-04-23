@@ -17,7 +17,7 @@ public class ParenthesisCombinations {
 	 * if 2 pairs then add the second pair in 3 different places in first first pair.. say
 	 * 	1. add the second pair in the beginning of first pair - ()()
 	 *  2. add the second pair to the end of first pair -()()
-	 *  3. add the second pair around the first pair. -(()())
+	 *  3. add the second pair around the first pair. -(())
 	 *  
 	 *   Do this for all the elements in the set (which would be the o/p of n-1 step)
 	 * @param n

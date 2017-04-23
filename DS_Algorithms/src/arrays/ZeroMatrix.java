@@ -34,7 +34,7 @@ public class ZeroMatrix {
 			}
 		}
 		
-		for(int r=0; r < rowLength; r++)
+		/*for(int r=0; r < rowLength; r++)
 		{
 			for(int c=0; c < colLength; c++){
 				
@@ -43,6 +43,15 @@ public class ZeroMatrix {
 				}
 				
 			}
+		}*/
+		
+		for(int r : zeroRows){
+			for(int c=0; c<colLength;c++)
+				matrix[r][c] = 0;
+		}
+		for(int c : zeroCols){
+			for(int r=0; r<rowLength;r++)
+				matrix[r][c] = 0;
 		}
 	}
 	

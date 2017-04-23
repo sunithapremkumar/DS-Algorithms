@@ -3,6 +3,7 @@ import java.util.Arrays;
 
 /**
  * http://www.geeksforgeeks.org/counting-sort/
+ * Mainly used for smaller range of integer data
  * @author suni
  *
  */

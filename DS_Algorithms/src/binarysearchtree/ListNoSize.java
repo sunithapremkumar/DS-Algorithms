@@ -20,7 +20,7 @@ public class ListNoSize {
 	public int search(Listy list, int x){
 		
 		int index = 1;
-		while(index != -1 && x > list.elementAt(index))
+		while(list.elementAt(index) != -1 && x > list.elementAt(index))
 			index = index * 2;
 		
 		return binarySearch(list, index/2, index, x);
@@ -64,7 +64,7 @@ public class ListNoSize {
 		list.add(10);
 		list.add(30);
 		
-		System.out.println(obj.search(list, 10));
+		System.out.println(obj.search(list, 40));
 		
 	}
 

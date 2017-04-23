@@ -46,8 +46,8 @@ public class SmallestMissingNumber {
 	public int getSmallestMissing1(int[] arr){
 		
 	
-		int n = arr.length;
-		int total = (n+1)*(n+2)/2;
+		int n = arr.length; 
+		int total = (n+1)*(n+2)/2; // can also use n(n+1)/2 formula where n is the max number in array
 		for(int i=0; i< arr.length;i++){
 			total = total - arr[i];
 		}
@@ -58,8 +58,8 @@ public class SmallestMissingNumber {
 	public static void main(String arg[]){
 		
 		int[] arr = {5,10,9,7,8};
-		int result = (new SmallestMissingNumber()).getSmallestMissing(arr);
-		System.out.println(result);
+		//int result = (new SmallestMissingNumber()).getSmallestMissing(arr);
+		//System.out.println(result);
 		
 		int[] arr1 = {1,2,4,5,6};
 		int result1 = (new SmallestMissingNumber()).getSmallestMissing1(arr1);

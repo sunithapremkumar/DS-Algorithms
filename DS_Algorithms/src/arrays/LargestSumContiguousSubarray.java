@@ -14,13 +14,14 @@ public class LargestSumContiguousSubarray {
 	public static void printLargestContigousSubarray(int arr[], int size){
 	//Todo Need to handle the case if all elements are -ve. sweep thru array and return the 
 		
-	int runningSum =0, maxSum =0;
-    int startIndex =0, endIndex =0;
-   
+	int maxSum =0;
+    int startIndex =0, endIndex =0; //resultant values 
+    int runningStart = 0,  runningSum =0; 
+    
     for(int i=0; i< size; i++){
  
       if (runningSum == 0)
-          startIndex = i;  
+          runningStart = i;  
       runningSum += arr[i];
       
       if(runningSum < 0){ // Reset the running sum if it goes negative as that won't contribute to the max sub array
@@ -29,6 +30,7 @@ public class LargestSumContiguousSubarray {
        
        if(maxSum < runningSum){
       	 maxSum = runningSum;
+      	 startIndex =runningStart;
      	  endIndex = i;
        }	
 	 }

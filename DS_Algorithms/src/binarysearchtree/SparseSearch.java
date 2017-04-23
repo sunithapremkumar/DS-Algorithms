@@ -1,7 +1,7 @@
 package binarysearchtree;
 
 /**
- * Given a sorted array of strings that has empty strings, write a method to find the index of a given string
+ * Given a sorted array of strings that has empty strings, write a method to f][p0ind the index of a given string
  * @author suni
  *
  */
@@ -21,13 +21,15 @@ private int binarySearch(String[] arr, int start, int end, String x){
 				if(left < start && right >end)
 					return -1;
 				if(left >= start && !arr[left].equals("")){
-					mid = left--;
+					mid = left;
 					break;
 				}
 				else if(right <= end && !arr[right].equals("")){
-					mid = right++;
+					mid = right;
 					break;
 				}
+				left--;
+				right++;
 					
 			}
 		}

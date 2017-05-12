@@ -73,7 +73,7 @@ public class TwoSum {
 		return false;
 	}
 	//Find if pair exist for a sum in a given int[]. array can have duplicate and negatives
-   public static boolean doesPairExist(int[] arr, int sum)
+ /*  public static boolean doesPairExist(int[] arr, int sum)
 	{
 		HashMap<Integer, Integer> map = new HashMap<>();
 		
@@ -97,7 +97,7 @@ public class TwoSum {
 		
 		return false;
 		}
-	
+	*/
 	 public static void main(String arg[]){
 		 
 		 TwoSum sum = new TwoSum();

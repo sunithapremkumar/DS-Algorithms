@@ -15,9 +15,10 @@ import java.util.Set;
 public class DepthSum {
 
 
-	int sum = 0;
+	//int sum = 0;
 	public int depthSum(List<NestedInteger> input, int depth){
 		
+		int sum = 0;
 		for(NestedInteger val: input ){
 		
 			  if(val.isInteger()){
@@ -26,7 +27,7 @@ public class DepthSum {
 				  System.out.println("sum:" + sum);
 			  }
 			  else{
-				  depthSum(val.getList(), depth + 1);
+				  sum += depthSum(val.getList(), depth + 1);
 			  }
 		}
 		return sum;
@@ -90,7 +91,8 @@ public class DepthSum {
 	    list2.addInteger(sum.new MyInteger(1));
 	    list.add(list2);
 	    
-	   // System.out.println("FINAL: "+sum.depthSum(list, 1));
+	    
+	    //System.out.println("FINAL: "+ sum.depthSum(list, 1));
 	    
 	    sum.reverseSum(list,1);
 	    

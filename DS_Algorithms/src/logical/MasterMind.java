@@ -36,7 +36,7 @@ public class MasterMind {
 		Set<Character> hitSet = new HashSet<>();
 		Set<Character> pseudoSet = new HashSet<>();
 		
-		for(int i=0; i< gus.length; i++){
+	/*	for(int i=0; i< gus.length; i++){
 			char curChar = gus[i];
 			if(curChar == sln[i]){
 				hitSet.add(curChar);
@@ -49,6 +49,20 @@ public class MasterMind {
 						pseudoSet.add(curChar);
 				}
 					
+			}
+		}
+		*/
+		for(int i=0; i< gus.length; i++){
+			char curChar = gus[i];
+			int solnCharIndex = soln.indexOf(curChar);
+			if(i == solnCharIndex){
+				hitSet.add(curChar);
+				if(pseudoSet.contains(curChar)) // If pseudo set already has this char, then remove as that char is counted in hit list
+					pseudoSet.remove(curChar);
+			}else if(solnCharIndex != -1){
+				//chek if this char appears anywhere in soln. if so add to pseudo list
+					if(!hitSet.contains(curChar)) //if this char is already in hit list then don't count in pseudo list
+						pseudoSet.add(curChar);
 			}
 		}
 		int hits = hitSet.size();

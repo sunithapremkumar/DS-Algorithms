@@ -31,7 +31,7 @@ public class PrintExcelHeading {
 	
 	public static void main(String... s){
 		
-		System.out.println(728 +": " + printExcelHeading(728));
+		System.out.println(728 +": " + printExcelHeading(29));
 		System.out.println(1000 +": " + printExcelHeading(1000));
 		System.out.println(2000 +": " + printExcelHeading(2000));
 		System.out.println(1111 +": " + printExcelHeading(1111));

@@ -6,6 +6,8 @@ package linkedlist;
  *
  */
 public class InsertionSortList {
+	
+	//this is actually selection sort
     public static  ListNode insertionSortList(ListNode head) {
         
         ListNode slow = head;

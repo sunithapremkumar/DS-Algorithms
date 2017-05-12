@@ -6,10 +6,16 @@ package recursion;
  */
 public class RecursiveMultiplication {
 
-	 public int multiply(int x, int y){
+	 public static int multiply(int x, int y){
 		 if(y ==0)
 			 return 0;
 		 
 		 return x + multiply (x, y-1);
 	 }
+	
+	 
+	 public static void main(String atg[]){
+		 System.out.println(RecursiveMultiplication.multiply(2, 3));
+	 }
+	 
 }

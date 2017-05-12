@@ -3,6 +3,7 @@ package ds;
 import java.util.Random;
 
 import binarysearchtree.TreeNode;
+import binarysearchtree.RankFromStream.RankNode;
 
 public class BinaryTreeNode {
 	int data;
@@ -31,7 +32,22 @@ public class BinaryTreeNode {
 		return null;
 		
 	}
-	
+	public void insert1(BinaryTreeNode x){
+		if(x == null)
+			return;
+		if(x.data <= data){
+			if(left == null)
+				left = x;
+			else
+				left.insert(x);
+		}else{
+			if(right == null)
+				right = x;
+			else
+				right.insert(x);
+		}
+		size++;
+	}
 
 	public void insert(BinaryTreeNode node){
 		if(node == null)

@@ -10,7 +10,7 @@ public class PrintAllTreePathSum {
         return resultList;  
         
     }
-    
+    //Find all paths that sums up to the given number
     private void findPath(TreeNode n, int runningSum, int sum, List<Integer> paths, List<List<Integer>> resultList){
         if(n == null)
              return; 
@@ -28,6 +28,28 @@ public class PrintAllTreePathSum {
         paths.remove(paths.size()-1);
     }
     
+    //Find any one path that sums up to the given number
+    private boolean findPath1(TreeNode n, int runningSum, int sum, List<Integer> paths, List<List<Integer>> resultList){
+        if(n == null)
+             return false; 
+        
+         runningSum += n.data;
+         paths.add(n.data);
+        if(n.right == null && n.left == null){
+            if(runningSum == sum){
+            	resultList.add(new ArrayList<Integer>(paths));   
+            	return true;
+            }
+        }
+        
+        if(findPath1(n.left, runningSum, sum, paths, resultList))
+        	return true;
+        if(findPath1(n.right, runningSum, sum, paths, resultList))
+        	return true;
+        
+        paths.remove(paths.size()-1);
+        return false;
+    }
       
     
     public static void main(String arg[]){

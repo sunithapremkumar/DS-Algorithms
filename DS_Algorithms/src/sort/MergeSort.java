@@ -1,6 +1,6 @@
-package arrays;
+package sort;
 // It's better to do merge sort which is of On(logn) time and return the 3rd index in the sorted array.
-public class ThirdLargeNumber {
+public class MergeSort {
 
 	private int[] inputArr; int count =0;
 	
@@ -92,7 +92,7 @@ public class ThirdLargeNumber {
 		int[] arr = {2,1,3,5,4};
 		
 		//System.out.println("3rd Large number: "+ new ThirdLargeNumber().getLargeNumber(arr));
-		System.out.println("3rd Largest :" +  new ThirdLargeNumber().getThirdLargest(arr));
+		System.out.println("3rd Largest :" +  new MergeSort().getThirdLargest(arr));
 		
 	}
 	

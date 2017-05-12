@@ -28,7 +28,7 @@ public class Partition {
 			  if(n.data < k){
 				  n.next = head;
 				  head = n;
-			  }else{
+			  }else {
 				  tail.next = n;
 				  tail = n;
 			  }
@@ -43,27 +43,27 @@ public class Partition {
 		  Node n6 = new Node(1);
 		    n6.next = null;
 		    
-			Node n5 = new Node(2);
+			Node n5 = new Node(8);
 			n5.next = n6;
 			
-			Node n4 = new Node(10);
+			Node n4 = new Node(4);
 			n4.next = n5;
 			
-			Node n3 = new Node(5);
+			Node n3 = new Node(2);
 			n3.next = n4;
 			
-			Node n2 = new Node(8);
+			Node n2 = new Node(7);
 			n2.next = n3;
 			
-			Node n1 = new Node(5);
+			Node n1 = new Node(3);
 			n1.next = n2;
 			
-			Node n = new Node(3);
+			Node n = new Node(5);
 			n.next = n1;
 			
 			Partition obj = new Partition();
 			
-			Node res = obj.partition(n, 5);
+			Node res = obj.partition(n, 4);
 			
 			while(res != null){
 				System.out.println(res.data);

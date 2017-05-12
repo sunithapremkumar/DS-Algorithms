@@ -25,11 +25,11 @@ public class IsBinaryTree {
 	    boolean checkBST1(Node n, int min, int max){
 	    	if(n == null)
 	    		return true;
-	    	if((n.data >min) && (n.data < max) && checkBST1(n.left,min, n.data) && checkBST1(n.right, n.data, max))
-	    		return true;
-	    	else
+	    	if(!((n.data >min) && (n.data < max)))
 	    		return false;
-	    	
+	    	if(! (checkBST1(n.left,min, n.data) && checkBST1(n.right, n.data, max)))
+	    		return false;
+	    	return true;
 	    }
 	    
 	    static class Node
@@ -45,12 +45,12 @@ public class IsBinaryTree {
 	    }
 	    public static void main(String...strings ){
 	    	Node root = new Node(4);
-	        root.left = new Node(8);
+	        root.left = new Node(2);
 	        root.right = new Node(5);
 	        //root.left.left = new Node(1);
 	        //root.left.right = new Node(3);
 	 
-	    	//System.out.println(new IsBinaryTree().checkBST(root));
+	    	System.out.println(new IsBinaryTree().checkBST(root));
 	        System.out.println(new IsBinaryTree().checkBST1(root, Integer.MIN_VALUE, Integer.MAX_VALUE));
 	    }
 }

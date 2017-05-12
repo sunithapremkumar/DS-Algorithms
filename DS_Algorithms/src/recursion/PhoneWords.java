@@ -35,7 +35,7 @@ public class PhoneWords {
 		}
 	}
 	
-	// O(n!) - since  it contains all permutation of strings
+	// O(n) - since  it contains all permutation of strings
 	private ArrayList<String>  addToList(ArrayList<String> result, String sequence){
 		ArrayList<String> newResult = new ArrayList<>();
 		

@@ -1,4 +1,4 @@
-package binarysearchtree;
+ package binarysearchtree;
 /**
  * Find minimum in sorted rotated array. No duplicates there.
  * @author suni

@@ -9,7 +9,7 @@ public class BucketSort {
 	
 	public void sort(int[] arr){
 		
-		int[] bucket = new int[255];
+		int[] bucket = new int[255]; //find max element ND INITIALlize with thats
 		for(int i=0; i<arr.length; i++){
 			bucket[arr[i]]++;
 		}
@@ -29,7 +29,8 @@ public class BucketSort {
 		}
 	}
 	
-	//sorting floating numbers
+	//sorting floating numbers. This work if all values are less than zero.. i
+	//if we havve value like 1.5. 1.5*size gives index over sizes
 	public void sortDouble(double[] arr){
 		
 		ArrayList<Double> bucket[] = new ArrayList[arr.length];

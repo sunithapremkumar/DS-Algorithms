@@ -57,17 +57,17 @@ public class ReverseSinglyLinkedList {
 	}
 	
    //Reversing linked list inline.. without cloning
-   // Take next node and add it to front of the current node.. 
+   // Take next node and add it to front of the current node.. =
    public Node reverseInline( Node n, Node next, Node head){
-	   if(next == null)
-		    return n;
+	   if(next == null){
+		   return head;
+	   }
 	   if(head == n) // setting the last node next to null.
 		   n.next = null;
-	    Node tmp = next.next; 
-	    next.next = n;  
-	  
-	   Node r = reverseInline(next, tmp, head);
-	   return r;
+	   Node tmp = next.next;
+	   next.next = head;
+	   head = next;
+	   return reverseInline(n, tmp, head);
 	  
    }
 	public static class Node{

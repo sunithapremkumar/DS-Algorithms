@@ -7,5 +7,6 @@ public  class Node{
 		data = d;
 	}
 	public int data;
+	public Node random;
 	public Node next;
 }

@@ -60,9 +60,8 @@ public class Intersection {
 	
 	//Just a wrapper to wrap 2 data to return
 	private Result length(Node n){
-		int size = 0;
-		
-		while(n != null){
+		int size = 1;
+		while(n.next != null){
 			size++;
 			n = n.next;
 		}

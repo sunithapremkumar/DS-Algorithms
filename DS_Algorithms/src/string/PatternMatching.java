@@ -50,10 +50,26 @@ public class PatternMatching {
 		}
 	}
 	
+	//brute force O(n*m)
+	public static int findIndex(char[] text, char[] pattern){
+		
+		for(int i=0; i< text.length; i++){
+			for(int j=0; ; j++){
+				if(j == pattern.length) return i;
+				if(i+j >= text.length) return -1;
+				if(pattern[j] != text[i+j])
+					break;
+			}
+		}
+		return -1;
+	}
+	
 	public static void main(String...strings)
 	{
 
-		findPatternIndex("AABAACAADAABAAABAA".toCharArray(), "AABA".toCharArray());
+		findPatternIndex("AABAACAADAABAAABAA".toCharArray(), "CAAD".toCharArray());
+		
+		System.out.println("New Pattern " + findIndex("AABAACAADAABAAABAA".toCharArray(), "CAAD".toCharArray()));
 		//findPatternIndex("ABABABCABABABCABABAC".toCharArray(), "ABABAC".toCharArray());
 		
 	    //findPatternIndex("abxabcabcaby".toCharArray(), "abcaby".toCharArray());

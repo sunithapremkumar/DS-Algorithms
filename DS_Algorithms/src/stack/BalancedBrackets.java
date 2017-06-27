@@ -25,11 +25,10 @@ public class BalancedBrackets {
 	        char[] charArray = expression.toCharArray();
 	        for(int i= 0; i< charArray.length; i++){
 	            char c = charArray[i];
-	            if(c == '{' || c == '[' || c == '('){
+	            if(bracesMap.containsKey(c)){
 	                st.push(c);
 	            }
-	            else if(c == '}' || c == ']' || c == ')'){
-	               if((st.isEmpty()) || (bracesMap.get(st.pop()) != c))
+	            else if((st.isEmpty()) || (bracesMap.get(st.pop()) != c)){
 	                    return false;                    
 	            }
 	        }

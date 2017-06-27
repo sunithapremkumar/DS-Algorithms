@@ -54,21 +54,21 @@ public class ExpressionEvaluation {
 	  double result = 0;
 	  double secondVal = val.pop();
 	  double firstVal = val.pop();
-	  switch(op){
-	  case "+":	
-		  result = firstVal + secondVal;
-		  break;
-	  case "-":	
-		  result = firstVal - secondVal;
-		  break;
-	  case "*":	
-		  result = firstVal * secondVal;
-		  break;
-	  case "/":	
-		  result = firstVal / secondVal;
-		  break;
-	  }
+	  result = eval(firstVal, secondVal, op);
 	  val.push(result);
+  }
+  
+  private static double eval(double x, double y, String operator){
+	  switch(operator){
+	  case "+":	
+		  return x + y;
+	  case "-":	
+		  return x - y;
+	  case "*":	
+		  return  x * y;
+	  default:	
+		  return x / y;
+	  }
   }
   
   public static void main(String...strings){

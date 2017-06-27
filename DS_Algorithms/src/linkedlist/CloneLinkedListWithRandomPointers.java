@@ -35,10 +35,15 @@ public class CloneLinkedListWithRandomPointers {
 		//removing the links of original nodes
 		cur = node;
 		Node newHead = cur.next;
-		while(cur != null && cur.next.next != null){
-			Node origNext = cur.next.next;
-			cur.next.next = origNext.next;
-		    cur = origNext;
+//		while(cur != null && cur.next.next != null){
+//			Node origNext = cur.next.next;
+//			cur.next.next = origNext.next;
+//		    cur = origNext;
+//		}
+		Node c = newHead;
+		while( c != null && c.next != null){
+			c.next = c.next.next;
+			c = c.next;
 		}
 		return newHead;
 	}

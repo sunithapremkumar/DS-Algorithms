@@ -1,7 +1,11 @@
 package ds;
 
 import java.util.*;
-
+/**
+ * Create a data structure where the values are added by inc() and removed by dec(). getMax and getMin should return in O(1) time
+ * @author suni
+ *
+ */
 public class AllOne {
 
 

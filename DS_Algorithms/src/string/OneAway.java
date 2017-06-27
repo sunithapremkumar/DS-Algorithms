@@ -16,8 +16,30 @@ import java.util.HashMap;
  *
  */
 public class OneAway {
-	
-	
+	 //better way
+	 // if m==n = check only if one char differs case "abcd" and "abed"
+		// if m > n swap..
+		// if m < n - there are 2 cases s="abd" t="abcd" nd s="abc" t="abcd" (
+		public boolean isOneAway1(String s, String t){
+		   int m = s.length();
+		   int n = t.length();
+		   if(m-n > 1)
+			   return false;
+		   if(m > n) return isOneAway1(t, s);
+		   
+		   int i=0; int shift = n-m; // diff in length
+		   while( i<m && s.charAt(i) == t.charAt(i)) //keep checking each char until it differs
+			   i++;
+		   if(i == m) // case where s="abc", t="abcd" 
+			   return shift > 0;
+		   if(shift ==0) i++; //case where s="abcd" t="abed" shifting index of both S & T
+		   
+		   while(i< m && s.charAt(i) == t.charAt(i +shift)) //Shifting the index of only T case S="abd" T= "abcd"s
+			   i++;
+		   return i==m;
+		}
+		
+	//initial not so good way
 	public boolean isOneAway(String str1, String str2){
 		
 		if(str1 == null || str2 == null) 
@@ -62,12 +84,15 @@ public class OneAway {
 		return false;
 	}
 	
+	
+	
+	
 	public static void main(String arg[]){
 		
 		OneAway obj = new OneAway();
 		String str1 = "ple"; //"palo";
 		String str2 = "lpes";//"aplw";
-		System.out.println(obj.isOneAway(str1, str2));
+		System.out.println(obj.isOneAway1(str1, str2));
 	}
 
 }

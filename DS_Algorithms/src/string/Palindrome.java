@@ -11,8 +11,11 @@ public class Palindrome {
 	    char[] cArr = str.toCharArray();
 	    
 	    while(start <= end){
+	    	//skipping the non alpha numeric characters
+	      while(start < end && !Character.isLetterOrDigit(cArr[start])) start++;
+	      while(start < end && !Character.isLetterOrDigit(cArr[end]))end--;
 	      
-	     if(cArr[start] != cArr[end])
+	     if(Character.toLowerCase(cArr[start]) != Character.toLowerCase(cArr[end]))
 	          return false;
 	      start++;
 	      end--;    

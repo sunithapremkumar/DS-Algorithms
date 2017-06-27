@@ -1,4 +1,4 @@
-package arrays;
+package binarysearchtree;
 
 /**
  *  Given an array of sorted integers with duplicates in it. Find the first occurance and last occurance of a number.

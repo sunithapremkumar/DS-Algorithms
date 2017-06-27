@@ -15,18 +15,15 @@ public class IsMirrorImage {
      //      of right tree have to be mirror images
 	public static boolean isMirrorImage(TreeNode n1, TreeNode n2){
 		
-		if(n1 == null & n2 == null)
+		if(n1 == null && n2 == null)
 			return true;
+		if(n1 == null || n2 == null)
+			return false;
 		
 		if(n1.data != n2.data)
 			return false;
 		
-		if(!isMirrorImage(n1.left, n2.right))
-			return false;
-		if(!isMirrorImage(n1.right, n2.left))
-			return false;
-					
-		return true;
+		return (isMirrorImage(n1.left, n2.right) && isMirrorImage(n1.right, n2.left));
 	}
 	
 	public static void main(String arg[]){

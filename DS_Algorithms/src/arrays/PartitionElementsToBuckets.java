@@ -17,7 +17,7 @@ output:[10],[9,1],[3,6]
 public class PartitionElementsToBuckets {
 
 	// ALGO - Create k lists by adding single element from last of the array.
-	// Then find the smallest sum list and the other elements one by one to the smallest sum list.
+	// Then find the smallest sum list add the other elements one by one to the smallest sum list.
 public static List<List<Integer>> arraySplit(int[] arr, int k){
 	List<List<Integer>> res = new ArrayList<>();
 	int i = 0;

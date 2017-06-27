@@ -45,7 +45,7 @@ public class SumSwap {
 			int x = i;
 			int y = target + x;
 			
-			if(y > x && bigArray.contains(y)){
+			if(bigArray.contains(y)){
 				System.out.println(x + "  " + y);
 				return;
 			}

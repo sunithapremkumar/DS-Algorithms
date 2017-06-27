@@ -1,5 +1,5 @@
 package ds;
-
+//linear probing
 public class MyHashMap {
 
 	  HashEntry[] entries;

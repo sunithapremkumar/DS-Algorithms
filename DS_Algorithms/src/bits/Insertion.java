@@ -13,8 +13,8 @@ public class Insertion {
 	
 	public void insert(int n, int m, int start, int end){
 		
-		int i = ~0;
-		int leftMask = i << (start+1);
+		
+		int leftMask = -1 << (start+1);
 		int rightMask =  (1 << end) -1;
 		
 		System.out.println("leftMask"+ leftMask + "Right Mask" + rightMask);

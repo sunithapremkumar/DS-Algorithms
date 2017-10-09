@@ -6,6 +6,10 @@ import linkedlist.DetectLinkedListCycle.Node;
  * Find kth to last node
  * @author suni
  *
+ *ALGO - Option 1 - We can find the length first and traverse again till the (length-k) nodes. O(2n)
+ *option 2 - Using 2 pointer technique with fast pointer k nodes away from slow pointer. Even here we traverse twice as we use 2 pointers
+ *but in this case, the processor might use cache to get the recent node as the node was accessed very recently compared to option 1 
+ *where the nodes are accessed at later stage it would have lost its cache  by then. So option 2 is better approach although both are O(n)
  */
 public class KthToLast {
 

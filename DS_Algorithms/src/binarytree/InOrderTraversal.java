@@ -25,7 +25,7 @@ public class InOrderTraversal {
 		while(!st.isEmpty()){
 			TreeNode node = st.pop();
 			if(node.right != null)
-				st.push(node.right);
+				st.push(node.right); // it's wrong. push the enire left side of this node not just this node
 			System.out.println("Iterative "+ node.data);
 			
 		}

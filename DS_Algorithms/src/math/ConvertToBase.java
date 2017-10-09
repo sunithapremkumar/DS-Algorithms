@@ -1,4 +1,4 @@
-package logical;
+package math;
 
 import java.util.Stack;
 

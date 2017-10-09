@@ -36,6 +36,21 @@ public class PalindromePermutation {
 	 return true;
 	}
 	
+	// Better way of doing using HashSet which just tracks the odd number of chars.. 
+	// Add the odd chars and if we find even char remove it.
+	HashSet<Character> uniqueChars = new HashSet<>();
+	public boolean isPalindromePermutation1(String str){
+		 if(str == null)
+			 return false;
+		 for(char c: str.toCharArray()){
+				if(uniqueChars.contains(c))
+					uniqueChars.remove(c);
+				else
+					uniqueChars.add(c);
+			}
+	 return (uniqueChars.size() <=1);
+	}
+	
 	private void countChars(String str){
 		
 		for(char c: str.toCharArray()){
@@ -108,7 +123,7 @@ public class PalindromePermutation {
 		
 		PalindromePermutation obj = new PalindromePermutation();
 		System.out.println(obj.isPalindromePermutation(s));
-		System.out.println(obj.isPalindromePermutation2(s));
+		System.out.println(obj.isPalindromePermutation1(s));
 	}
 
 }

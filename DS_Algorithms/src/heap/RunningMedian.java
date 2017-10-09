@@ -5,11 +5,7 @@ import java.util.*;
 
 public class RunningMedian {
 
-	private class MyComparator implements Comparator<Integer>{
-		 public int compare(Integer a, Integer b){
-	            return (b-a);
-	        }
-	}
+	
 	 static PriorityQueue<Integer> lowers = new PriorityQueue<Integer>(10, new Comparator<Integer>(){
 	        public int compare(Integer a, Integer b){
 	            return (b-a);

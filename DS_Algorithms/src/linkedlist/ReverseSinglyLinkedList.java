@@ -70,6 +70,24 @@ public class ReverseSinglyLinkedList {
 	   return reverseInline(n, tmp, head);
 	  
    }
+   
+   // Inplace reversal (favourite one)
+   // Just point every node to the previous node.
+   public Node reverseInline1(Node n){
+	   
+	   Node prev = null;
+	   Node current = n;
+	   
+	   while(current != null){
+		   Node next = current.next;
+		   current.next = prev;
+		   
+		   prev = current;
+		   current = next;
+	   }
+	   
+	   return prev;
+   }
 	public static class Node{
 		public int data;
 		public Node next = null;
@@ -107,7 +125,8 @@ public class ReverseSinglyLinkedList {
 		print(head2);
 		*/
 		System.out.println("-------------");
-		Node head3 = new ReverseSinglyLinkedList().reverseInline(n1, n1.next, n1);
+		//Node head3 = new ReverseSinglyLinkedList().reverseInline(n1, n1.next, n1);
+		Node head3 = new ReverseSinglyLinkedList().reverseInline1(n1);
 		print(head3);
 	
 	}

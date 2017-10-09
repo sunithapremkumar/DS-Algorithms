@@ -1,5 +1,10 @@
 package string;
-
+/**
+ * if we reverse word by word, sicne the words are of diff length, scooting happens which costs O(n^2).
+ * So reverse the entire sentence and again reverse word by word which costs O(n)
+ * @author suni
+ *
+ */
 public class ReverseWords {
 	
 	   // O(n)  time and O(n) space. We can also do it with 2 passes by splitting string with space in first pass and constructing the string from reverse in second pass.

@@ -32,7 +32,7 @@ public class Fibonacci {
 	
 	
 	public static void main(String arg[]){
-		System.out.println(new Fibonacci().fib(5, new int[6]));
+		System.out.println(new Fibonacci().fib(1, new int[6]));
 		
 		//System.out.println(new Fibonacci().factorial(25));
 	}

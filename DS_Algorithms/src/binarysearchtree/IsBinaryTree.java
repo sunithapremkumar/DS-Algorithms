@@ -27,9 +27,8 @@ public class IsBinaryTree {
 	    		return true;
 	    	if(!((n.data >min) && (n.data < max)))
 	    		return false;
-	    	if(! (checkBST1(n.left,min, n.data) && checkBST1(n.right, n.data, max)))
-	    		return false;
-	    	return true;
+	    	return (checkBST1(n.left,min, n.data) && checkBST1(n.right, n.data, max));
+	    	
 	    }
 	    
 	    static class Node

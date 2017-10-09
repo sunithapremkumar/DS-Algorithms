@@ -57,8 +57,8 @@ public class TreePathSum {
 		if(node.left == null & node.right == null){ //leaf node
 			if(sum == target)
 				return true;
-			else
-				return false;
+			//else
+			//	return false;
 		}
 		if(pathSum1(node.left, sum, target, path))
 			return true;

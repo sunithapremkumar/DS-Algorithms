@@ -1,0 +1,14 @@
+
+ insertion sort
+peaks and valley
+circular array
+Find the element before which all the elements are smaller than it, and after which all are greater -geeks
+   Track the max so far from 0 to end in separate array
+   Track min so far from end to start in sepaate array 
+   Check the original array element lies between those values in those 2 arrays
+   
+Find the kth smallest in a sorted matrix
+    Start from 0,0,  check (r,col+1) and (r+1, col). the min is the second min
+    From there check again.. that wud be 3rd min
+    do until k-1 times
+      

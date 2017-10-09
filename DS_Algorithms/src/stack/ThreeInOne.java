@@ -46,7 +46,7 @@ public class ThreeInOne {
 	 
 	 public int topIndex(int stackNum){
 		 int offset = stackNum * stackCapacity;
-		 int  index = offset + stackSizes[stackNum] -1;
+		 int  index = offset + stackSizes[stackNum] -1; //  1*100 = 100 + size(1) = 101 but actually the secondstack starts at 100
 		 return index;
 	 
 }

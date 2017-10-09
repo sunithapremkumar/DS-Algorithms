@@ -21,6 +21,6 @@ public class Staircase {
 	public static void main(String arg[])
 	{
 		Staircase obj = new Staircase();
-		System.out.println(obj.countWays(4));
+		System.out.println(obj.countWays(3));
 	}
 }

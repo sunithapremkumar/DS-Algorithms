@@ -12,7 +12,7 @@ public void findPaths(Node node, String tag, int level, ArrayList<String> result
 	result.add(node.tag());
 	
 	if(node.tag().equals(tag)){
-		printResult(result);
+		//printResult(result);
 		return;
 	}
 	

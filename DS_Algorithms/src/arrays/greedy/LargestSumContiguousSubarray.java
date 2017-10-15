@@ -1,4 +1,4 @@
-package arrays;
+package arrays.greedy;
 
 /**
    Keep adding, if the sum becomes negative, then reset the running sum to zero and continue adding. Keep track of the maxSum apart of runnigSum. 
